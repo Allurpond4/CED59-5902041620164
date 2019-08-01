@@ -7,7 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template('form1.html')
 
-
+@app.route('/',methods=["post"])
+def register():
+    return 'xyz';
 if __name__ == '__main__':
 
   app.run()

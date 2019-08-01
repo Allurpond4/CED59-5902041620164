@@ -5,20 +5,24 @@
     <title>Title</title>
 
     <style>
-        body{font-size: 60px
+        body{font-size: 60px,
+
             }
     </style>
 </head>
 <body>
-
-<p1>Name : <input type="text"> </p1>
+<form action="/" method="post">
+<p1>Name : <input type="text" name="name"> </p1>
 <br>
-<p2>Surname : <input type="text"> </p2>
+<p2>Surname : <input type="text" name="sname"> </p2>
 <br>
-<p3>Username : <input type="text"> </p3>
+<p3>Username : <input type="text" name="user"> </p3>
 <br>
-<p4>E-mail : <input type="text"></p4>
+<p4>E-mail : <input type="text" name="email"></p4>
 <br>
-<p5>Password : <input type="text"></p5>
+<p5>Password : <input type="password" name="pass"></p5>
+    <br>
+    <input type="submit">
+</form>
 </body>
 </html>
