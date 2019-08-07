@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{font-size: 60px
+            }
+    </style>
+        <script type="text/javascript">
+function fncSubmit() {
+    var checkname = document.forms["frm_regis"]["name"].value;
+    if (checkname == "") {
+        alert("กรุณากรอก ชื่อ");
+        document.getElementById("username").focus();
+        return false;
+    }
+    {
+        var checkUsername = document.forms["frm_regis"]["username"].value;
+        if (checkUsername == "") {
+            alert("กรุณากรอก Username");
+            document.getElementById("usertxt").focus();
+            return false;
+        }
+        var regularP = /^[a-z 0-9_-]{8,18}$/;
+        var password = document.forms["frm_regis"]["password"].value;
+        var checkPass = regularP.exec(password);
+        if (!checkPass) {
+            alert("กรุณารหัส ให้ถูกต้อง");
+            document.getElementById("passtxt").focus();
+            return false;
+        }
+        var regularE = /^(w_\.= - + ] +)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        var Email = document.forms["frm_regis"]["email"].value;
+        var checkEmail = regularE.exec(Email);
+        if (!checkEmail) {
+            alert("กรุณา Email ให้ถูกต้อง");
+            document.getElementById("emailtxt").focus();
+            return false;
+        }
+        if (!checkName == "" && !checkUsername == "" && checkPass && checkEmail) {
+            alert("Every thing is Success !! ");
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+</script>
+
+</head>
+<body>
+<form  action="" method="post" id="frm_regis"  onSubmit="JavaScript:return fncSubmit();">
+   Name : <input type="text" id="username" name="name">
+<br>
+Username : <input type="text" id="usertxt" name="username">
+<br>
+   Password : <input type="password" id="passtxt" name="password">
+    <br>
+E-mail : <input type="text" id="emailtxt" name="email">
+<br>
+    <input type="submit" name="button" id="button" value="Submit">
+</form>
+</body>
+</html>
