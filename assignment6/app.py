@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
+
+def index():
+    return render_template('form1.html')
+
 def register():
     return 'Welcome to my world'
 
