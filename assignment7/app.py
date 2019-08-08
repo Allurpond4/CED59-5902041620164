@@ -1,10 +1,10 @@
 from flask import Flask,render_template
-from wtforms import
+
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',method=["post"])
 
 def index():
     return render_template('form1.html')
