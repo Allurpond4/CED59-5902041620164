@@ -6,7 +6,7 @@ from wtfforms.validators import DataRequired
 app = Flask(__name__)
 
 
-@app.route('/', method=["post"])
+@app.route('/', method=['POST'])
 def index():
     return render_template('form1.html')
 
