@@ -45,6 +45,10 @@ return [
             ],
         ],
         */
+        'authManager' =>[
+            'class' =>'yii\rback\DbManager',
+
+        ],
     ],
     'params' => $params,
 ];
