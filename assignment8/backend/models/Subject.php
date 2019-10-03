@@ -15,8 +15,8 @@ class Subject extends \common\models\Subject
     }
     public function rules(){
         return [
-            ['name','string','message' =>'Please enter data']
-            ['name','email','message' => 'กรอก อีเมลล์จ้า']
+            ['name','string','message' =>'Please enter data'],
+            ['name','email','message' => 'Please Email']
         ];
     }
 }
